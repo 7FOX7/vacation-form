@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@400,700;&display=swap" rel="stylesheet">
+        <title>Assignment 3</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="./index.html">
+                    <img 
+                        src="./images/compass.webp" 
+                        alt="compass"
+                        width="60"
+                        draggable="false"
+                    />
+                </a>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <main>
+                <h1>Book Your Vacation Today!</h1>
+                <p class="subheading">Start Planning Your Perfect Vacation Today and Uncover the Adventure of a Lifetime with Us!</p>
+                <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <div class="grid-container">   <!-- This is how you will control one/two-column grid layout -->
+                            <div>
+                                <div class="">
+                                    <label for="firstName">First Name</label>
+                                    <div class="input-container">
+                                        <span class="icon-container">
+                                            <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
+                                            </svg>
+                                        </span>
+                                        <input 
+                                            id="firstName" 
+                                            name="firstName"
+                                            required
+                                            aria-required="true"
+                                            placeholder="Evgenii"
+                                            type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="lastName">Last Name</label>
+                                    <div class="input-container">
+                                        <span class="icon-container">
+                                            <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
+                                            </svg>
+                                        </span>
+                                        <input 
+                                            id="lastName" 
+                                            name="lastName"
+                                            required
+                                            aria-required="true"
+                                            placeholder="Khe"
+                                            type="text"
+                                        />
+                                    </div>
+                                </div>
+                                <div>    
+                                    <label for="email">Email</label>
+                                    <input 
+                                        id="email" 
+                                        name="email"
+                                        pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.com$"
+                                        placeholder="evgenii@yahoo.com"
+                                        required
+                                        aria-required="true"
+                                        type="email"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="phoneNumber">Phone Number</label>
+                                    <input 
+                                        id="phoneNumber"
+                                        name="phoneNumber" 
+                                        pattern="^[1-9][0-9]{10}$"
+                                        placeholder="123 456 7890"
+                                        required
+                                        aria-required="true"
+                                        type="tel"    
+                                    />
+                                </div>
+                            </div>
+                            <div>   <!-- This will NOT be visible when the user is on mobile -->
+                                <p style="color: violet;">Still something to prove</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Travel Information</legend>
+                        <div class="grid-container">   <!-- This is how you will control one/two-column grid layout -->
+                            <div>   <!-- will appear on the left (if desktop) -->
+                                <div>
+                                    <label for="destination">Preffered Travel Destination</label>
+                                    <select 
+                                        id="destination" 
+                                        name="destination"
+                                        required 
+                                        aria-required="true"
+                                    >
+                                        <option
+                                            disabled
+                                            selected
+                                        >
+                                            Select a travel destination
+                                        </option>
+                                        <option value="Bali">
+                                            Bali
+                                        </option>
+                                        <option value="Paris">
+                                            Paris
+                                        </option>
+                                        <option value="Tokyo">
+                                            Tokyo
+                                        </option>
+                                        <option value="New York">
+                                            New York
+                                        </option>
+                                        <option value="Sydney">
+                                            Sydney
+                                        </option>
+                                        <option value="Bora Bora">
+                                            Bora Bora
+                                        </option>
+                                        <option value="Tahiti">
+                                            Tahiti
+                                        </option>
+                                        <option value="Punta Cana">
+                                            Punta Cana
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="departureDate">Travel Departure Date</label>
+                                    <input 
+                                        id="departureDate" 
+                                        name="departureDate"
+                                        required 
+                                        aria-required="true"
+                                        type="date" 
+                                    />
+                                </div>
+                                <div>
+                                    <label for="numOfTravelers">Number of Travelers</label>
+                                    <input 
+                                        id="numOfTravelers"
+                                        name="numOfTravelers"
+                                        pattern="[0-9]{1, 1000}"
+                                        required 
+                                        aria-required="true"
+                                        type="number" 
+                                    />
+                                </div>
+                                <div>
+                                    <label for="travelPackage">Type of Travel Package</label>
+                                    <select 
+                                        id="travelPackage"
+                                        required 
+                                        aria-required="true"
+                                    >
+                                        <option 
+                                            disabled
+                                            selected 
+                                        >
+                                            Select a type
+                                        </option>
+                                        <option value="budget">
+                                            Budget
+                                        </option>
+                                        <option value="standard">
+                                            Standard
+                                        </option>
+                                        <option value="luxury">
+                                            Luxury
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="requests">Special Requests/Comments</label>
+                                    <textarea 
+                                        id="requests"
+                                        name="requests"
+                                        maxlength="500" 
+                                        aria-required="false"
+                                        spellcheck="true"
+                                    >
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div>   <!-- will appear on the right (if desktop) -->
+                                <p style="color: green;">Still something to prove</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legened>Payment Information</legened>
+                        <div class="grid-container">
+                            <div>
+                                <div>
+                                    <label>Payment Method</label>
+                                    <div class="radio-button-outer-container">
+                                        <div class="radio-button-inner-container">
+                                            <input
+                                                id="paymentCreditCard" 
+                                                name="payment"
+                                                required 
+                                                aria-required="true"
+                                                type="radio" 
+                                                value="Credit Card" 
+                                            />
+                                            <label for="paymentCreditCard">Credit Card</label>
+                                        </div>
+                                        <div class="radio-button-inner-container">
+                                            <input 
+                                                id="paymentPayPal"
+                                                name="payment" 
+                                                required 
+                                                aria-required="true"
+                                                type="radio" 
+                                                value="PayPal" 
+                                            />
+                                            <label for="paymentPayPal">PayPal</label>
+                                        </div>
+                                        <div class="radio-button-inner-container">
+                                            <input 
+                                                id="paymentBankTransfer"
+                                                name="payment" 
+                                                required 
+                                                aria-required="true"
+                                                type="radio" 
+                                                value="Bank Transfer" 
+                                            />
+                                            <label for="paymentBankTransfer">Bank Transfer</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="creditCard">Credit Card Number</label>
+                                    <input 
+                                        id="creditCard"
+                                        name="creditCard"
+                                        pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$"
+                                        required 
+                                        aria-required="true"
+                                        type="number" 
+                                    />
+                                </div>
+                                <div>
+                                    <label for="cvc">CVC</label>
+                                    <input 
+                                        id="cvc"
+                                        name="cvc"
+                                        pattern="[0-9]{3}"
+                                        required 
+                                        aria-required="true"
+                                        type="password"  
+                                    />
+                                </div>
+                                <div>
+                                    <label for="fileUpload">Upload ID Proof</label>
+                                    <label for="fileUpload" class="file-upload-field" aria-controls="fileUpload"></label>
+                                    <input 
+                                        id="fileUpload"
+                                        class="file-upload"
+                                        name="fileUpload" 
+                                        required 
+                                        aria-required="true"
+                                        aria-hidden="true"
+                                        type="file"
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p style="color: green;">Still something to prove</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="grid-container">
+                        <button type="Submit">
+                            <div class="default-background"></div>
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <footer>
+            Copyright &copy; 2024 Evgenii Khe. All rights reserved.
+        </footer>
+    </body>
+</html>

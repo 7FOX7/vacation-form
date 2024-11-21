@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    padding: 0; 
+	margin: 0; 
+    color: rgb(0, 255, 167); 
+	background: rgb(0, 0, 0); 
+    overflow-x: hidden; 
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed; 
+    width: 100%; 
+}
+
+header nav {
+    background-color: rgb(0, 255, 167);  
+    width: 100%; 
+    padding: 1rem; 
+}
+
+main {
+    width: 100%; 
+    background: transparent; 
+}
+
+footer {
+    width: 100%; 
+	background-color: rgb(0, 255, 167);
+    color: rgb(0, 0, 0); 
+	padding: 15px;
+	text-align: center;
+}
+
+fieldset {
+    width: 100%; 
+    height: 100vh;
+    border-color: rgba(0, 255, 167, 0.4); 
+}
+
+select { 
+    width: 100%; 
+    outline: none; 
+    border-bottom: 5px solid rgb(0, 255, 167); 
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0; 
+}
+
+input {
+    width: 100%; 
+    outline: none; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 0 5px 5px 0; 
+}
+
+input[type="radio"] {
+    width: auto; 
+}
+
+input[type="text"]:focus, 
+textarea:focus {
+    border: 3px solid rgb(0, 173, 113); 
+}
+
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    border-radius: 5px; 
+    outline: none; 
+    border: 1px solid rgb(145, 145, 145); 
+}
+
+button {
+    position: relative;
+    display: flex; 
+    justify-content: center;  
+	background: rgb(0, 255, 167); 
+	border: 1px solid transparent; 
+	border-radius: 5px;
+	font-size: 1rem; 
+	margin-top: 15px; 
+	padding: 10px 30px;  
+	cursor: pointer;
+}
+
+/* button div {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 90%; 
+    height: 90%; 
+    background: rgb(255, 255, 255); 
+}
+
+button:hover {
+    background: blue;  
+} */
+
+.wrapper {
+    max-width: 1440px; 
+    min-width: 384px; 
+    width: 100%; 
+    display: grid; 
+    justify-self: center; 
+    padding-block: 100px; 
+}
+
+.grid-container {
+    display: grid; 
+    column-gap: 8; 
+}
+
+.input-container {
+    display: flex;
+    background: red;  
+    border: 1px solid rgb(145, 145, 145); 
+}
+
+.input-container .icon-container {
+    display: inline-flex; 
+    padding: 10px;   
+    background-color: rgb(141, 141, 141);
+    border-radius: 5px 0 0 5px;  
+    color: rgb(255, 255, 255); 
+}
+
+.icon-container .icon {
+    width: 25px; 
+    height: 25px; 
+}
+
+.radio-button-outer-container, 
+.radio-button-inner-container {
+    border: 1px solid rgb(145, 145, 145); 
+}
+
+.radio-button-inner-container {
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    text-align: center; 
+    padding: 15px 5px; 
+}
+
+.subheading {
+    color: #fff; 
+    font-size: 1.3rem; 
+}
+
+.file-upload {
+    display: none; 
+}
+
+.file-upload-field {
+    display: block; 
+    width: 100%; 
+    height: 250px; 
+    background: rgb(189, 189, 189); 
+    border: 4px dashed black; 
+    border-radius: 5px; 
+}
+
+@media screen and (max-width: 768px) {
+	.grid-container {
+        grid-template-columns: 1; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+	.grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.file-upload:valid + .file-upload-field {
+    background: green; 
+} 
+
+
+/* <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+<span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+Purple to blue
+</span> */
+
